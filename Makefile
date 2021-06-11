@@ -1,10 +1,10 @@
-all: echo_client echo_server
+all: select client
 
-echo_client: echo_client.cpp
-	g++ -o echo_client echo_client.cpp -pthread
+select: select.c
+	g++ -o select.c -pthread
 
-echo_server: echo_server.cpp
-	g++ -o echo_server echo_server.cpp -pthread
+client: client.c
+	g++ -o client.c -pthread
 
 clean:
-	rm echo_client echo_server
+	rm select client
